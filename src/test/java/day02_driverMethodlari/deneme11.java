@@ -28,8 +28,8 @@ public class deneme11 {
         driver.findElement(By.xpath("//*[@id='sub-btn']")).click();
 
         //Remove butonu'nun görünür olduğunu test edin
-        // WebElement removeButton = driver.findElement(By.className("remove-btn"));
-        WebElement removeButton = driver.findElement(By.xpath("//*[@class='remove-btn']"));
+
+        WebElement removeButton = driver.findElement(By.xpath("//*[text()='Remove']"));
         if (removeButton.isDisplayed()){
             System.out.println("RemoveButton Test PASSED");
         }else{
@@ -41,8 +41,8 @@ public class deneme11 {
         removeButton.click();
 
         // "Add/Remove Elements" yazisinin görünür olduğunu test edin
-        //WebElement addRemoveElements = driver.findElement(By.tagName("h2"));
-        WebElement addRemoveElements = driver.findElement(By.xpath("//h2"));
+
+        WebElement addRemoveElements = driver.findElement(By.xpath("//*[text()='Add/Remove Elements']"));  //<----- TEXT'i xpath ile yazma.
         if (addRemoveElements.isDisplayed()){
             System.out.println("addRemove Element test PASSED");
 
